@@ -682,7 +682,7 @@
         var rsvp = {};
 
         // check code
-        var code = getUrlVars()["code"];
+        var code = getUrlVars()["code"].toLowerCase();
 
         if (!code) {
           window.location.href = '/';
