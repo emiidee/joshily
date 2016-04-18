@@ -1,0 +1,505 @@
+/* 
+    Document   : colors
+    Author     : Little Neko
+    Description: template colors
+    */
+
+
+/* Table of Content
+==================================================
+
+#BOOSTRAP CUSTOMIZATION
+#TYPOGRAPHY
+#LINKS AND BUTTONS
+#HEADER
+#MAIN MENU 
+#FOOTER 
+#SLIDERS
+#PORTFOLIO
+#MISCELANIOUS
+#NEKO CSS FRAMEWORK
+
+*/
+/* #3CB6B6 */
+
+/* BOOSTRAP CUSTOMIZATION
+================================================== */
+
+/** tabs **/
+.panel-default>.panel-heading {
+	background:#fff;
+	border-bottom: #3CB6B6;
+
+}
+
+.panel-default>.panel-heading:hover {
+	background:#fff;
+}
+
+.panel-default>.panel-heading:hover a {
+	color:#3CB6B6;
+}
+.panel-title>a {
+	color:#222;
+}
+
+.panel-title>a:hover {text-decoration: none;}
+
+.progress-bar{
+	background-color:#3CB6B6;
+}
+
+.page-header {
+	color:#fff;
+	background-color: #3CB6B6;
+	padding: 44px 0;
+	margin: 0;
+	border-bottom: 0;
+}
+.page-header h1{
+	color:#fff;
+	margin: 0;
+}
+
+/* END BOOSTRAP CUSTOMIZATION
+================================================== */
+
+/* TYPOGRAPHY
+================================================== */
+
+body {
+	color:#222;
+	background: #F7F7F7;
+}
+
+blockquote small {
+	color:inherit;
+}
+h1, h2, h3, h4, h5, h6 {
+	color:#222;
+}
+h2 {
+	color:#888;	
+}
+h2 i {color:#999}
+h2.subTitle:after, h1.noSubtitle:after{
+	background-color:#3CB6B6;
+}
+
+/*** parallax sections ***/
+
+.parallaxText blockquote:before, .parallaxText blockquote:after {
+	color:#fff;
+}
+#home, #parallaxSlice1, #parallaxSlice2, #parallaxSlice3, #parallaxSlice4 {
+	background-color:#3CB6B6;
+}
+#parallaxSlice1 {
+	background-image: url('../images/theme-pics/paralax-1.jpg');
+}
+#parallaxSlice2 {
+	background-image: url('../images/theme-pics/proposal4.jpg');
+}
+#parallaxSlice3 {
+	background-image: url('../images/theme-pics/paralax-3.jpg');
+}
+#parallaxSlice4 {
+	background-image: url('../images/theme-pics/paralax-4.jpg');
+}
+.parallaxText blockquote, .parallaxText h1, .parallaxText h2, .parallaxText h3, .parallaxText p, .parallaxText i{
+	color:#fff;
+}
+
+/* END TYPOGRAPHY
+================================================== */
+
+/* LINKS AND BUTTONS
+================================================== */
+
+a {
+	color:#3CB6B6;
+}
+a:hover, .scrollspyNav .active a {
+	color:#3CB6B6;
+}
+ul.iconsList li a {
+	color:#555
+}
+ul.iconsList li a:hover, ul.iconsList i {
+	color:#3CB6B6
+}
+
+/*** buttons ***/
+.btn {
+	background:#3CB6B6;
+	color:#fff;
+	border:none;
+}
+.btn:hover {
+	color:#3CB6B6;
+	border-color:#3CB6B6;
+	text-shadow:none;
+	background:#BCE3E0;
+}
+.btn-primary {
+	background: #222;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled] {
+	background: #555;
+}
+.btn-info {
+	background: #49AFCD;
+}
+.btn-success {
+	background: #5BB75B;
+}
+.btn-warning {
+	background: #FAA732;
+}
+.btn-danger {
+	background: #DA4F49;
+}
+.btn-link, .btn-link:active, .btn-link[disabled], .btn-link:hover {
+	background:none;
+	border:none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow:none;
+	box-shadow: none;
+	color:#49AFCD;
+}
+.btnWrapper {
+	border:1px solid #ccc;
+}
+
+/* END LINKS AND BUTTONS
+================================================== */
+
+/* MAIN MENU 
+================================================== */
+
+#mainHeader{
+	background:white;
+	border-bottom: 3px solid #F7F7F7;
+}
+.header-2 #mainHeader {
+	border: none;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+#mainHeader .navbar-inner {
+	background: #444;
+	filter:none !important;
+}
+#mainMenu ul li a, #resMainMenu ul li a {
+	color:#444;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+	color:#3CB6B6;
+	background:none;
+}
+
+.header-2 .navbar-default .navbar-nav > .active > a,
+.header-2 .navbar-default .navbar-nav>li>a:hover,
+.header-2 .navbar-default .navbar-nav>li>a:focus,
+.header-2 .navbar-default .navbar-nav > .active > a:hover,
+.header-2 .navbar-default .navbar-nav > .active > a:focus {
+	color:#fff;
+	background:#3CB6B6;
+}
+
+/* END MAIN MENU 
+================================================== */
+
+/* FOOTER 
+================================================== */
+
+footer {
+	color:#777;
+	background:#aaa;
+}
+
+footer h1, footer h2, footer h3, footer h4, footer h5 {
+	color:white;
+}
+#footerRights {
+	background-color:#fff;
+	color:#777;
+	border-top: 1px solid #bbb
+}
+p.credits {
+	color:#555;
+}
+p.credits a {
+	color:#f15f7f;
+}
+
+/* END FOOTER 
+================================================== */
+
+/* HOME
+================================================== */
+
+#home h1 {color:#FFFFFF;}
+
+/* END HOME
+================================================== */
+
+/* SLIDERS
+================================================== */
+
+/*** OWL ***/
+
+.owl-theme .owl-controls .owl-page span {
+	background:#3CB6B6;
+}
+
+/*** END OWL ***/
+
+/*** SUPERSLIDES ***/
+#fullScreenWrapper h1,  #fullScreenWrapper h2,  #fullScreenWrapper h3,  #fullScreenWrapper h4,  #fullScreenWrapper h5, #fullScreenWrapper p  {
+	color:#fff;
+}
+
+.slides-pagination a {
+	border-color:#fff;
+}
+.slides-pagination a.current {
+	background:#fff;
+}
+
+.slides-navigation a {
+	color:#fff;
+	opacity:0.5;
+}
+
+.slides-navigation a:hover {
+	opacity:1;
+}
+/*** END SUPERSLIDES ***/
+/* END SLIDERS
+================================================== */
+
+/* PORTFOLIO
+================================================== */
+
+nav#filter a {
+	background-color: #EEE;
+	color:#555;
+}
+nav#filter a:hover, nav#filter a.current {
+	background-color: #3CB6B6;
+	color:#fff;
+}
+li.filterTitle {
+	color:#4F6266;
+}
+section#projectDescription {
+	background-color:#F8F8F8
+}
+
+
+.mask{background: rgba(0, 0, 0, 0.5);}
+.mediaHover h1, .mediaHover  h2, .mediaHover  h3, .mediaHover  h4, .mediaHover  h5, .mediaHover  h6{color:white;}
+
+
+/* END PORTFOLIO
+================================================== */
+
+/* BLOG
+================================================== */
+#blog {
+	background-color: #fff;
+}
+h1.entry-title{
+	color:#3CB6B6;
+}
+.comment-list .media {
+	border-bottom: 1px solid #eee;
+}
+.widget li {
+	border-bottom: 1px solid  #eee 
+}
+
+/* END BLOG
+================================================== */
+/* MISCELANIOUS
+================================================== */
+
+#proposal {
+	background-image: url('../images/theme-pics/splatter.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+/*#proposal {
+	background-image: url('../images/theme-pics/ring.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: -20% 20%; 
+}*/
+
+#details {
+	background-image: url('../images/theme-pics/lombardi.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: 100% auto;
+}
+
+.line {
+	background:#3CB6B6;
+}
+
+/*** hover images ***/
+.iconLinks a span {color:#fff;}
+
+/*** pricing table ***/
+.pricingBloc {
+	background-color:#fff;
+	border:none;
+
+}
+.pricingBloc ul li {
+	border-bottom:1px solid #ddd;
+	color:#444!important;
+}
+.pricingBloc ul li:last-child {
+	border-bottom:none;
+}
+.pricingBloc h2 {
+	background-color:#fff;
+	color:#888!important;
+	border-bottom: 1px solid #EEE;
+}
+.pricingBloc h3 {
+	background-color:#fff;
+	color:#888!important;
+	border-bottom: 1px solid #EEE;
+
+}
+.pricingBloc p {
+	background-color:#fff;
+	color:#444!important;
+}
+.pricingBloc.focusPlan {
+	margin-top:0;
+	border-color:#D1D1D1;
+}
+.pricingBloc.focusPlan h2{
+	color:#3CB6B6!important;
+}
+.pricingBloc.focusPlan h3 {
+	background-color:#3CB6B6;
+	color:#fff!important;
+}
+
+/*** Form ***/
+.form-control:focus{
+	border-color: #3CB6B6;
+	background-color:#ededed;
+	box-shadow:none!important;
+	-webkit-box-shadow:none!important;
+	-moz-box-shadow:none!important;
+}
+.form-control {
+	color: #444;
+	background-color:#fff;
+	border:2px solid #ccc;
+}
+
+.has-error .form-control {
+	color: #B94A48;
+	background-color: #F2DEDE;
+	border-color: #EED3D7;
+}
+
+.has-error div {
+	color:#fff;
+	background-color: #B94A48;
+	border:none
+}
+
+#projectQuote, #projectQuote h3 {
+	background:#ddd;
+	color:#444;
+}
+
+.signal-loader { border-color: #3CB6B6;}
+
+/* END MISCELANIOUS
+================================================== */
+
+/* NEKO CSS FRAMEWORK
+================================================== */
+
+/*** Feature box **/
+
+.boxFeature i{color:#3CB6B6;} 
+
+/*** slices ***/
+.slice, .projectHeader, .project{
+	background-color:#fff;
+}
+
+/*** call to action ***/
+.ctaBox {
+	border:5px double rgba(0,0,0,0.05);
+}
+.ctaBoxFullwidth{border:none}
+
+.ctaBox blockquote {
+	color:#fff;
+}
+
+.ctaBox.darkColor .ctaBoxBtn a.btn:hover {
+	background-color: #fff;
+}
+
+.ctaBox.mainColor .ctaBoxBtn a.btn {
+	background-color: #fff;
+	color:#3CB6B6;
+}
+.ctaBox.mainColor .ctaBoxBtn a.btn:hover{
+	background-color: #222;
+	color:#fff;
+}
+
+/*darkColor*/
+.darkColor, .slice.darkColor, .bulle.darkColor, .ctaBox.darkColor{
+	background-color:#222;
+	color:#999;
+}
+
+.darkColor h1, .darkColor h2, .darkColor h3, .darkColor h4, .darkColor blockquote, .darkColor a{
+	color:#fff;
+}
+.darkColor a.btn{color:#fff;}
+.darkColor a.btn:hover{color:#3CB6B6;}
+
+/*mainColor*/
+.mainColor, .slice.mainColor, .bulle.mainColor, .ctaBox.mainColor{
+	background-color:#3CB6B6;
+	color:#fff;
+}
+
+.mainColor h1, .mainColor h2, .mainColor h3, .mainColor h4, .mainColor blockquote, .mainColor a {
+	color:#fff;
+}
+
+.mainColor h2.subTitle:after, .mainColor h1.noSubtitle:after {
+	background:#fff;
+}
+/*** icons ***/
+.iconRounded {color:#3CB6B6;background-color:#222;}
+footer .iconRounded {background-color:#444; }
+.iconRounded:hover, .darkColor .iconRounded:hover{background-color:#3CB6B6;color:#fff;}
+.darkColor .iconRounded {color:#3CB6B6; background:#333;}
+.mainColor .iconRounded {background-color:#222;color:#fff;}
+.mainColor .iconRounded:hover {background-color:#fff;color:#3CB6B6;}
+
+
+.mainColor .line {
+	background:#fff;
+}
+
+/* END NEKO CSS FRAMEWORK
+================================================== */
