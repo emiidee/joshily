@@ -82,7 +82,7 @@
                 <li><a href="#about">Our Story</a> </li>
                 <li><a href="#details">When & Where</a> </li>
                 <li><a href="#rsvp">RSVP</a> </li>
-                <li><a href="#explore">Explore LA</a> </li>
+                <!-- <li><a href="#explore">Explore LA</a> </li> -->
                 <li><a href="#registry">Registry</a> </li>
                 <!-- menu -->
                 <!-- wedding party -->
@@ -241,7 +241,7 @@
               <div class="col-sm-4"> 
                 <div class="form-group">
                   <label for="name">Name of your party</label>
-                  <input type="text" class="form-control" name="name" id="name" placeholder="Enter name"/>
+                  <input type="text" class="form-control" name="name" id="name" placeholder="Enter name" required/>
                 </div>
                 <div class="form-group">
                   <label for="email">Email</label>
@@ -251,26 +251,22 @@
                   <label for="phone">Phone</label>
                   <input name="phone" class="form-control required digits" type="tel" id="phone" size="30" value="" placeholder="Enter phone number"/>
                 </div>
-                <!-- <div class="form-group">
-                  <label for="address">Address (optional)</label>
-                  <textarea name="address" class="form-control" id="address" cols="3" rows="3" placeholder="We may send you some nice things"></textarea>
-                </div> -->
               </div>
               <div class="col-sm-4">
                 <div class="form-group">
                   <label for="rsvp">Will you be joining us?</label>
                   <div>
                     <label class="radio-inline" style="text-transform:none">
-                      <input type="radio" name="rsvp" id="rsvp-yes" value="yes"> Yes!
+                      <input type="radio" name="rsvp" id="rsvp-yes" value="yes" required> Yes!
                     </label>
                     <label class="radio-inline" style="text-transform:none">
-                      <input type="radio" name="rsvp" id="rsvp-no" value="no"> No :(
+                      <input type="radio" name="rsvp" id="rsvp-no" value="no" required> No :(
                     </label>
                     </div>
                 </div>
                 <div class="form-group">
                   <label for="rsvp-seats">How many in your party?</label>
-                  <input name="rsvp-seats" class="form-control" id="rsvp-seats" placeholder="Total number of guests"/>
+                  <input name="rsvp-seats" class="form-control" type="number" id="rsvp-seats" placeholder="Total number of guests"/>
                 </div>
                 <div class="form-group">
                   <label for="guest-names">Who will be joining us?</label>
@@ -280,7 +276,11 @@
               <div class="col-sm-4">
                 <div class="form-group">
                   <label for="comments">Anything we should know?</label>
-                  <textarea name="comments" class="form-control" id="comments" cols="3" rows="5" placeholder="Allergies, dietary concerns, must have songs..."></textarea>
+                  <textarea name="comments" class="form-control" id="comments" cols="3" rows="3" placeholder="Allergies, dietary concerns, must have songs..."></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="address">Address (optional)</label>
+                  <textarea name="address" class="form-control" id="address" cols="3" rows="2" placeholder="We may send you some nice things"></textarea>
                 </div>
                 <button name="submit" type="submit" class="btn btn-lg" id="submit"> Submit</button>
               </div>
@@ -298,7 +298,7 @@
       <!-- / rsvp -->
 
       <!-- works -->
-      <section class="slice noPaddingBottom" id="explore">
+      <!-- <section class="slice noPaddingBottom" id="explore">
 
         <div class="container clearfix">
           <div class="row">
@@ -482,11 +482,11 @@
             </figure>
           </article>
         </div>
-      </section>
+      </section> -->
       <!-- / works -->
 
       <!-- parallax -->
-      <section id="parallaxSlice1" data-stellar-background-ratio="0.5">
+      <!-- <section id="parallaxSlice1" data-stellar-background-ratio="0.5">
         <div class="maskParent">
           <div class="maskOverlay opacity-6"></div>
           <div class="parallaxText">
@@ -499,7 +499,7 @@
             </blockquote>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- / parallax -->
 
       <!-- team -->
@@ -656,10 +656,8 @@
 
         // check code
         var code = getUrlVars()["code"];
-        console.log('code', code)
 
         if (!code) {
-          console.log('no code')
           window.location.href = '/';
         }
 
@@ -676,11 +674,26 @@
             // check for code
             if (!!db[code]) {
               rsvp = db[code];
+
               // SET ALL FIELDS IN RSVP
               $("#name").val(rsvp.name);
-              $("#email").val(rsvp.email);
               $("#seats").text(rsvp.seats);
-              $("#rsvp-seats").attr('placeholder', 'Total guests, max ' + rsvp.seats);
+              if(rsvp.rsvp === 'yes') {
+                $("#rsvp-yes").prop('checked', true);
+              } else if (rsvp.rsvp === 'no') {
+                $("#rsvp-no").prop('checked', true);
+              }
+              $("#rsvp-seats").attr('max', rsvp.seats);
+              if (!!rsvp["rsvp-seats"]) {
+                $("#rsvp-seats").val(rsvp["rsvp-seats"]);
+              } else {
+                $("#rsvp-seats").attr('placeholder', 'Total guests, max ' + rsvp.seats);
+              }
+              $("#guest-names").text(rsvp['guest-names']);
+              $("#email").val(rsvp.email);
+              $("#phone").val(rsvp.phone);
+              $("#address").text(rsvp.address);
+              $("#comments").text(rsvp.comments);
               console.log('success', rsvp)
             } else {
               window.location.href = '/';
@@ -693,15 +706,30 @@
 
         // update
         var updateRSVP = function () {
+          if ($("#rsvpform").is(":invalid")) {
+            // throw error
+            return
+          }
+
+          // var fields = ["name", "seats", "rsvp", "rsvp-seats", "guest-names", "email", "phone", "address", "comments"];
           var data = {
             fields: {
-              name: $("#name").val(),
-              email: $("#email").val(),
-              dietary: 'no soybeans for albert'
+              "name": $("#name").val(),
+              "rsvp-seats": parseInt($("#rsvp-seats").val()),
+              "guest-names": $("#guest-names").val(),
+              "email": $("#email").val(),
+              "phone": $("#phone").val(),
+              "address": $("#address").val(),
+              "comments": $("#comments").val()
             }
           };
 
-          // check seats
+          // RSVP
+          if( !!$("#rsvp-yes").prop('checked') ) {
+            data.fields.rsvp = 'yes';
+          } else if ( !!$("#rsvp-no").prop('checked') ) {
+            data.fields.rsvp = 'no';
+          }
 
           $.ajax({
             url: airtableUrl + '/' + rsvp.id,
