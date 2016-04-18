@@ -1350,6 +1350,16 @@ h1.entry-title{
 
 }
 
+.square-logo {
+	width: 100px;
+	height: 100px;
+	margin-bottom: 15px;
+}
+
+.border-img {
+	border: 2px solid black;
+}
+
 /*** Scroll up Button ***/
 #neko-to-top{
 	position: fixed;
