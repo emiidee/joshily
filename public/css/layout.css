@@ -1046,6 +1046,11 @@ footer h3 {
 ================================================== */
 
 /** OWL SLIDER **/
+
+.owl-carousel h1 {
+	text-shadow: 2px 2px #bce3e0;
+}
+
 .owl-buttons {}
 .owl-theme .owl-controls .owl-buttons div {
 	position:absolute;
