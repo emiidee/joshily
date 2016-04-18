@@ -2,728 +2,120 @@
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if IE 9 ]><html class="ie ie9" lang="en"> <![endif]-->
-<!--[if (gte IE 10)|!(IE)]><!-->
-<html lang="en">
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en" id="comingSoon">
 <!--<![endif]-->
 <head>
-    <!-- Basic Page Needs
-    ================================================== -->
-    <meta charset="utf-8">
-    <title>Emily + Josh</title>
-    <!-- Mobile Specific Metas
-    ================================================== -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <!-- CSS
-    ================================================== -->
-    <!-- Bootstrap  -->
-    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- web font  -->
-    <link href='https://fonts.googleapis.com/css?family=Raleway:400,900' rel='stylesheet' type='text/css'>
-    <!-- plugin css  -->
-    <link rel="stylesheet" type="text/css" href="js/lib/animation-framework/animate.css" />
-    <link rel="stylesheet" type="text/css" href="js/lib/magnific-popup/magnific-popup.css" />
-    <link type="text/css" rel="stylesheet" href="js/lib/isotope/css/style.css">
-    <!-- Owl carousel-->
-    <link rel="stylesheet" href="js/lib/owl.carousel/owl-carousel/owl.carousel.css">
-    <link rel="stylesheet" href="js/lib/owl.carousel/owl-carousel/owl.theme.css">
-    <link rel="stylesheet" href="js/lib/owl.carousel/owl-carousel/owl.transitions.css">
-    <!-- icon fonts -->
-    <link type="text/css" rel="stylesheet" href="font-icons/custom-icons/css/custom-icons.css">
-    <link type="text/css" rel="stylesheet" href="font-icons/custom-icons/css/custom-icons-ie7.css">
-    <!-- Custom css -->
-    <link type="text/css" rel="stylesheet" href="css/layout.css">
-    <link type="text/css" id="colors" rel="stylesheet" href="css/sea-green.css">
-    <!-- <link rel="stylesheet" href="http://basehold.it/24"> -->
-    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
-    <script src="js/modernizr-2.6.1.min.js"></script>
-
-    <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
-    <!-- Favicons
-    ================================================== -->
-    <link rel="shortcut icon" href="images/favicon.ico">
-    <!-- <link rel="apple-touch-icon" href="images/apple-touch-icon.png"> -->
-    <!-- <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png"> -->
-    <!-- <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png"> -->
-    <!-- <link rel="apple-touch-icon" sizes="144x144" href="images/apple-touch-icon-144x144.png"> -->
-  </head>
-  <body data-spy="scroll" data-target="#scrollTarget" data-offset="150" id="fullScreen">
-  
-    <!-- Preloader -->
-    <div id="preloader">
-      <div id="status">
-        <div class="signal-loader"></div>
-        <h2>Loading</h2>
-      </div>
-    </div>
-    <!-- / Preloader -->
-    
-    <!-- globalWrapper -->
-    <div id="globalWrapper" class="localscroll">
-      <!-- header -->
-      <header id="mainHeader" class="navbar-fixed-top" role="banner">
-        <div class="container">
-          <nav class="navbar navbar-default scrollMenu" role="navigation">
-            <div class="navbar-header">
-
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"> <span class="sr-only">
-                Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-
-              <a class="navbar-brand" href="../index.html"><img src="images/main-logo.png" alt="CLEARFIX website template"/></a>
-            </div>
-            
-            <div class="collapse navbar-collapse navbar-ex1-collapse" id="scrollTarget">
-              <ul class="nav navbar-nav pull-right">
-                <li class="active"><a href="#homeFullScreen-2">#</a> </li>
-                <li><a href="#about">Our Story</a> </li>
-                <li><a href="#details">When & Where</a> </li>
-                <li><a href="#rsvp">RSVP</a> </li>
-                <li><a href="#explore">Explore LA</a> </li>
-                <li><a href="#registry">Registry</a> </li>
-                <!-- menu -->
-                <!-- wedding party -->
-              </ul>
-            </div>
-
-          </nav>
-        </div>
-      </header>
-      <!-- / header -->
-
-      <!-- home -->
-      <section id="homeFullScreen-2" data-stellar-background-ratio="0.5">
-        <div class="maskParent">
-          <div class="maskOverlay opacity-1"></div>
-          <div id="fullScreenWrapper">
-            <div class="centered-content">
-              <div id="logoBig" style="margin-top:18em">
-                <img class="img-responsive" src="images/main-logo-big.png" alt="Emily + Josh Splash" />
-              </div>
-              <div class="owl-carousel nekoDataOwl " data-neko_items="1" data-neko_singleitem="true" data-neko_pagination="true" data-neko_transitionstyle="fadeUp"  data-neko_autoplay="true">
-                <div class="item">
-                  <h1>Let's celebrate</h1>
-                </div>
-                <div class="item">
-                  <h1>#JoshilyEverAfter</h1>
-                </div>
-                <div class="item">
-                  <h1>Pop champagne</h1>
-                </div>
-              </div> 
-
-              <!-- <a href="#about" class="homeBtn btn scrollLink"><i class="icon-down"></i>RSVP</a> -->
-              <a href="#rsvp" class="homeBtn btn scrollLink"><i class="icon-down"></i>RSVP</a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- / home -->
-
-      <!-- our story -->
-      <section class="slice" id="about">
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-12 headingCenter">
-              <h1>Our Story</h1>
-              <h2 class="subTitle"></h2>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-sm-4"> <img src="images/theme-pics/doorkiss.gif" alt="services" class="img-responsive"> </div>
-            <div class="col-sm-4">
-              <h2>Hello<i class="icon-glyph-260"></i></h2>
-              <p>Emily and Josh met in college and quickly became best friends. Boba was a key ingredient in their budding friendship, and it’s become a central theme in their lives as a couple.</p>
-
-              <h2><i class="icon-glyph-52"></i>Let's go out</h2>
-              <p>Josh tried to ask Emily out for years, but it wasn’t until late 2010 that Emily finally said “yes”.  Their first two years were spent in LA as Emily finished college and Josh worked at a startup.</p>
-
-            </div>
-
-            <div class="col-sm-4">
-              <h2>Parenting sounds like a GOOD idea <i class="icon-glyph-213"></i></h2>
-              <p>Bowser joined the family in 2011 after he was the last puppy in his litter to be picked. It was lucky for his humans, since he was the puppy they had picked all along! Emily and Josh got Apple in Manhattan later that year. They fell in love with her at first sight and flew back home with her that day!</p>
-
-              <h3><i class="icon-glyph-123"></i>San Francisco</h3>
-              <p>The whole family moved back to San Francisco in 2012, where they live now.</p>
-
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- / our story -->
-      <!-- <hr /> -->
-
-      <!-- parallax -->       
-      <section id="parallaxSlice2" data-stellar-background-ratio="0.5">
-        <div class="maskParent">
-          <div class="maskOverlay opacity-6"></div>
-          <div class="parallaxText container">
-            <i class="icon-glyph-213 iconBig"></i><i class="icon-glyph-214 iconBig"></i>
-            <blockquote class="mt15">
-              <p>
-                Will you marry me?
-              </p>
-            </blockquote>
-          </div>
-        </div>
-      </section>
-      <!-- / parallax -->
-
-      <section id="proposal" class="slice">
-        <div class="container">
-
-          <div class="row">
-            <div class="col-sm-8">
-              <h2 style="color:#3CB6B6">The Proposal <i class="icon-glyph-80" style="color:#3CB6B6"></i></h2>
-              <p>With the help of friends old and new, Josh convinced Emily to fly out to LA. He took her to a rooftop helipad downtown under the guise of location scouting for a work photoshoot. Josh barely managed, completely forgetting English and bumbling around with the ring, but in the end, he proposed on the rooftop overlooking the city where they had met. Despite all of that, Emily said yes!</p>
-
-              <p>Friends had flown in from all over the country to celebrate, and they surprised Emily at lunch. It was a terrific start to the engagement!</p>
-            </div>
-            <div class="col-sm-4"> <img src="images/theme-pics/proposal5.png" alt="services" class="img-responsive"> </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- details -->
-      <section class="" id="details">
-        <div class="maskParent">
-          <div class="maskOverlay opacity-7"></div>
-          <div class="container">
-            <div class="row" style="padding:33px">
-              <div class="col-xs-12 headingCenter">
-                <h1>The details</h1>
-                <h2 class="subTitle">When & Where</h2>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-6 mb-sm mb-xs">
-                <h1>August 6, 2016</h1>
-                <h3>Saturday at 5:00pm</h3>
-                <h4><a href="http://www.lombardihouse.com/">The Lombardi House</a></h4>
-                <address>
-                  1717 Bronson Ave<br/>
-                  Los Angeles, California 90028 <br/>
-                </address>
-                <h2>Drinks and dancing to follow</h2>
-                <h2>MAP</h2>
-              </div>
-              <div class="col-sm-6 mb-sm mb-xs">
-                <h2>HOTEL ACCOMODATIONS</h2>
-                <p>The W, booking instructions</p>
-                <h2>Transportation</h2>
-                <p>HOSTED VALET WILL BE AVAILABLE ON BRONSON AVE.</p>
-                <p>GUESTS ARE ENCOURAGED TO TAKE UBER (USE INVITE CODE "UBERJOSHILY" FOR A FREE RIDE)</p>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- /details -->
-
-      <!-- rsvp -->
-      <section class="slice"  id="rsvp" >
-        <div class="container">
-          <div class="row">
-
-            <div class="col-xs-12 headingCenter">
-              <h1>RSVP</h1>
-              <h2 class="subTitle">We have <span id="seats">#</span> seats reserved for your party</h2>
-            </div>
-
-            <form id="rsvpform" role="form">
-
-              <div class="col-sm-4"> 
-                <div class="form-group">
-                  <label for="name">Name of your party</label>
-                  <input type="text" class="form-control" name="name" id="name" placeholder="Enter name"/>
-                </div>
-                <div class="form-group">
-                  <label for="email">Email</label>
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Enter email"/>
-                </div>
-                <div class="form-group">
-                  <label for="phone">Phone</label>
-                  <input name="phone" class="form-control required digits" type="tel" id="phone" size="30" value="" placeholder="Enter phone number"/>
-                </div>
-                <!-- <div class="form-group">
-                  <label for="address">Address (optional)</label>
-                  <textarea name="address" class="form-control" id="address" cols="3" rows="3" placeholder="We may send you some nice things"></textarea>
-                </div> -->
-              </div>
-              <div class="col-sm-4">
-                <div class="form-group">
-                  <label for="rsvp">Will you be joining us?</label>
-                  <div>
-                    <label class="radio-inline" style="text-transform:none">
-                      <input type="radio" name="rsvp" id="rsvp-yes" value="yes"> Yes!
-                    </label>
-                    <label class="radio-inline" style="text-transform:none">
-                      <input type="radio" name="rsvp" id="rsvp-no" value="no"> No :(
-                    </label>
-                    </div>
-                </div>
-                <div class="form-group">
-                  <label for="rsvp-seats">How many in your party?</label>
-                  <input name="rsvp-seats" class="form-control" id="rsvp-seats" placeholder="Total number of guests"/>
-                </div>
-                <div class="form-group">
-                  <label for="guest-names">Who will be joining us?</label>
-                  <textarea name="guest-names" class="form-control" id="guest-names" cols="3" rows="3" placeholder="Please list the full names of everyone in your party"></textarea>
-                </div>
-              </div>
-              <div class="col-sm-4">
-                <div class="form-group">
-                  <label for="comments">Anything we should know?</label>
-                  <textarea name="comments" class="form-control" id="comments" cols="3" rows="5" placeholder="Allergies, dietary concerns, must have songs..."></textarea>
-                </div>
-                <button name="submit" type="submit" class="btn btn-lg" id="submit"> Submit</button>
-              </div>
-              <div class="col-md-8 col-md-offset-4">
-              </div>
-            </form>
-          </div>
-          <div class="row">
-            <div class="col-sm-12 text-center" style="margin-top:20px">
-              <p id="response-message">Thanks for your RSVP! We can't wait to celebrate with you.<p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- / rsvp -->
-
-      <!-- works -->
-      <section class="slice noPaddingBottom" id="explore">
-
-        <div class="container clearfix">
-          <div class="row">
-            <div class="col-sm-6">
-              <h1>Explore LA</h1>
-              <h2 class="subTitle">Here are some of our favorite spots</h2>
-            </div>
-            <div class="col-sm-6">
-              <nav id="filter">
-                <ul>
-                  <li><a href="" class="current btn btn-sm" data-filter="*">All</a></li>
-                  <li><a href=""  class="btn btn-sm" data-filter=".explore" >Explore</a></li>
-                  <li><a href=""  class="btn btn-sm" data-filter=".food">Eat</a></li>
-                  <li><a href="" class="btn btn-sm" data-filter=".workout">Workout</a></li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-        </div>
-
-        <div class="portfolio-items  isotopeWrapper clearfix imgHover portfolioMosaic mosaic3">
-          <article class="isotopeItem food">
-            <figure class="imgWrapper">
-              <img alt="" src="images/portfolio/vign6.jpg" class="img-responsive">
-              <figcaption class="mediaHover">
-
-                <div class="iconLinks"> 
-                  <a href="portfolio-project-fullwidth-image.html" title="link" class="sizer portfolioSheet">
-                    <i class="icon-glyph-26 iconRounded"></i>
-                  </a> 
-                  <a href="images/portfolio/zoom6.jpg" class="image-link" title="Full width image">
-                    <i class="icon-glyph-16 iconRounded"></i>
-                  </a> 
-                </div>
-                <h3>Full width image</h3>
-              </figcaption>
-            </figure>
-          </article>
-
-          <article class="isotopeItem workout">
-            <figure class="imgWrapper"> 
-              <img alt="" src="images/portfolio/vign1.jpg" class="img-responsive"> 
-
-              <figcaption class="mediaHover">
-                <div class="iconLinks"> 
-                  <a href="portfolio-project-fullwidth-video.html" title="link" class="portfolioSheet sizer">
-                    <i class="icon-glyph-26 iconRounded"></i>
-                  </a> 
-                  <a href="http://www.youtube.com/watch?v=aqrtF7L86NQ" class="image-iframe" title="Video Popup" >
-                    <i class="icon-glyph-16 iconRounded"></i>
-                  </a> 
-                </div> 
-                <h3>Video</h3>  
-              </figcaption>
-            </figure>
-          </article>
-
-          <article class="isotopeItem explore">
-            <figure class="imgWrapper">
-              <img alt="" src="images/portfolio/vign7.jpg" class="img-responsive">
-
-              <figcaption class="mediaHover">
-                <div class="iconLinks"> 
-                  <a href="portfolio-project-fullwidth-video.html" title="link" class="sizer portfolioSheet">
-                    <i class="icon-glyph-26 iconRounded"></i>
-                  </a> 
-                  <a href="http://vimeo.com/ondemand/5335/75660130" class="image-iframe" title="Video Popup" >
-                    <i class="icon-glyph-16 iconRounded"></i>
-                  </a> 
-                </div>
-                <h3>Video</h3>
-              </figcaption>
-            </figure>
-          </article>
-
-          <article class="isotopeItem workout">
-            <figure class="imgWrapper">
-              <img alt="" src="images/portfolio/vign3.jpg" class="img-responsive">
-
-              <figcaption class="mediaHover">
-                <div class="iconLinks"> 
-                  <a href="portfolio-project-fullwidth-carousel.html" title="link" class="sizer portfolioSheet">
-                    <i class="icon-glyph-26 iconRounded"></i>
-                  </a> 
-                  <a href="images/portfolio/carousel-1.jpg" class="image-link" title="Zoom" data-gallery="images/portfolio/carousel-2.jpg,images/portfolio/carousel-3.jpg">
-                    <i class="icon-glyph-16 iconRounded"></i>
-                  </a> 
-                </div>
-                <h3>Gallery</h3>
-              </figcaption>
-            </figure>
-          </article>
-
-          <article class="isotopeItem workout">
-            <figure class="imgWrapper"> 
-              <img alt="" src="images/portfolio/vign2.jpg" class="img-responsive"> 
-
-              <figcaption class="mediaHover">
-                <div class="iconLinks">
-                  <a href="portfolio-project-fullwidth-carousel.html" title="link" class="sizer portfolioSheet"> <i class="icon-glyph-26 iconRounded"></i>
-                  </a>
-                  <a href="images/portfolio/zoom2.jpg" class="image-link" title="Gallery Popup" >
-                    <i class="icon-glyph-16 iconRounded"></i>
-                  </a>
-                </div>
-                <h3>Lorem ipsum dolor sit amet</h3>
-              </figcaption>
-            </figure>
-          </article>
-
-          <article class="isotopeItem food">
-            <figure class="imgWrapper"> 
-              <img alt="" src="images/portfolio/vign4.jpg" class="img-responsive"> 
-
-              <figcaption class="mediaHover">
-                <div class="iconLinks">
-                  <a href="portfolio-project-fullwidth-image.html" title="link" class="sizer portfolioSheet">
-                    <i class="icon-glyph-26 iconRounded"></i>
-                  </a>
-                  <a href="images/portfolio/zoom4.jpg" class="image-link" title="Zoom">
-                    <i class="icon-glyph-16 iconRounded"></i>
-                  </a>
-                </div>
-                <h3>Lorem ipsum dolor sit amet</h3>
-              </figcaption>
-            </figure>
-          </article>
-
-
-          <article class="isotopeItem explore">
-            <figure class="imgWrapper"> 
-              <img alt="" src="images/portfolio/vign8.jpg" class="img-responsive"> 
-
-              <figcaption class="mediaHover">
-                <div class="iconLinks">
-                  <a href="portfolio-project-fullwidth-image.html" title="link" class="sizer portfolioSheet">
-                    <i class="icon-glyph-26 iconRounded"></i>
-                  </a>
-                  <a href="images/portfolio/zoom8.jpg" class="image-link" title="Zoom" >
-                    <i class="icon-glyph-16 iconRounded"></i>
-                  </a>
-                </div>
-                <h3>Lorem ipsum dolor sit amet</h3>
-              </figcaption>
-            </figure>
-          </article>
-
-          <article class="isotopeItem food">
-            <figure class="imgWrapper"> 
-              <img alt="" src="images/portfolio/vign5.jpg" class="img-responsive"> 
-
-              <figcaption class="mediaHover">
-                <div class="iconLinks">
-                  <a href="portfolio-project-fullwidth-image.html" title="link" class="sizer portfolioSheet">
-                    <i class="icon-glyph-26 iconRounded"></i>
-                  </a>
-                  <a href="images/portfolio/zoom5.jpg" class="image-link" title="Zoom" >
-                    <i class="icon-glyph-16 iconRounded"></i>
-                  </a>
-                </div>
-                <h3>Lorem ipsum dolor sit amet</h3>
-              </figcaption>
-            </figure>
-          </article>
-
-          <article class="isotopeItem explore">
-            <figure class="imgWrapper"> 
-              <img alt="" src="images/portfolio/vign9.jpg" class="img-responsive"> 
-
-              <figcaption class="mediaHover">
-                <div class="iconLinks">
-                  <a href="portfolio-project-fullwidth-carousel.html" title="link" class="sizer portfolioSheet">
-                    <i class="icon-glyph-26 iconRounded"></i>
-                  </a>
-                  <a href="images/portfolio/zoom9.jpg" class="image-link" title="Zoom">
-                    <i class="icon-glyph-16 iconRounded"></i>
-                  </a> 
-                </div>
-                <h3>Lorem ipsum dolor sit amet</h3>
-              </figcaption>
-            </figure>
-          </article>
-        </div>
-      </section>
-      <!-- / works -->
-
-      <!-- parallax -->
-      <section id="parallaxSlice1" data-stellar-background-ratio="0.5">
-        <div class="maskParent">
-          <div class="maskOverlay opacity-6"></div>
-          <div class="parallaxText">
-            <i class="icon-glyph-142 iconBig"></i>
-            <blockquote class="mt15">
-              <p>
-                I JUST WORKED HARD<br/>
-                AND TRIED TO MAKE MY THING BETTER<br/><small>JESSE THORN </small>
-              </p>
-            </blockquote>
-          </div>
-        </div>
-      </section>
-      <!-- / parallax -->
-
-      <!-- team -->
-      <!-- <section class="slice" id="team">
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-12 headingCenter">
-              <h1>The Wedding Party</h1>
-              <h2 class="subTitle"></h2>
-            </div>
-
-            <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-0 mb-sm mb-xs">
-              <article>
-                <div><img src="images/team/pic1.jpg" alt="" class="img-responsive"></div>
-                <div class="boxContent text-center mainColor">
-                  <h3>Caleb Lu</h3>
-                  <p>Best man</p>
-                  <div class="line"></div>
-                  <h4 class="mt15">Quote</h4>
-                </div>
-              </article>
-            </div>
-            <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-0 mb-sm mb-xs">
-              <article>
-                <div><img src="images/team/pic2.jpg" alt="" class="img-responsive"></div>
-                <div class="boxContent text-center mainColor">
-                  <h3>Jennifer Yip</h3>
-                  <p>Maid of honor</p>
-                  <div class="line"></div>
-                  <h4 class="mt15">Quote</h4>
-                </div>
-              </article>
-            </div>
-            <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-0">
-              <article>
-                <div><img src="images/team/pic3.jpg" alt="" class="img-responsive"></div>
-                <div class="boxContent text-center mainColor">
-                  <h3>Bowser</h3>
-                  <p>Ring bear</p>
-                  <div class="line"></div>
-                  <h4 class="mt15">Quote</h4>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section> -->
-      <!-- / team -->
-
-      <!-- / parallax -->
-
-      <!-- registry -->
-     <section class="slice" id="registry">
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-12 headingCenter">
-              <h1>The registry</h1>
-              <h2 class="subTitle"></h2>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-3 col-sm-6 mb-sm mb-xs">
-              <article class="boxFeature-2">
-                <i class="icon-glyph-142 iconBig"></i>
-                <h2>Modern layout</h2>
-                <p>Elegant layouts that help you organize your content in the best way</p>
-              </article>
-            </div>
-
-            <div class="col-md-3 col-sm-6 mb-sm mb-xs">
-              <article class="boxFeature-2">
-                <i class="icon-glyph-72 iconBig"></i>
-                <h2>HTML5 & CSS3</h2>
-                <p>Built with modern technologies like HTML5 and CSS3, SEO optimised</p>
-              </article>
-            </div>
-
-            <div class="col-md-3 col-sm-6 mb-xs">
-              <article class="boxFeature-2">
-                <i class="icon-glyph-118 iconBig"></i>
-                <h2>Responsive design</h2>
-                <p>Compatible with various desktop, tablet, and mobile devices.</p>
-              </article>
-            </div>
-
-            <div class="col-md-3 col-sm-6">
-              <article class="boxFeature-2">
-                <i class="icon-glyph-220 iconBig"></i>
-                <h2>Easy Customization</h2>
-                <p>Clear code and documentation, base on Bootstrap 3</p>
-              </article>
-            </div>  
-
-          </div>
-        </div>
-      </section>
-      <!-- /registry -->
-
-      <!-- footer -->
-      <section  id="footerRights">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 text-center">
-              <p class="credits"><a href="https://www.instagram.com/explore/tags/joshilyeverafter/" target="blank">
-                <i class="icon-glyph-316"></i>JoshilyEverAfter
-              </a></p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- / footer -->
-    </div>
-    <!-- / global wrapper -->
-    
-    <!-- End Document 
-    ================================================== -->
-    <script type="text/javascript" src="js/lodash.core.min.js"></script>
-
-    <script type="text/javascript" src="js/lib/respond/respond.min.js"></script>
-    <script type="text/javascript" src="js/lib/jquery/jquery.1.10.2.min.js"></script>
-    <script type="text/javascript" src="js/lib/jquery-ui/jquery-ui-1.8.23.custom.min.js"></script>
-    <!-- third party plugins  -->
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/lib/easing/jquery.easing.1.3.js"></script>
-    <script type="text/javascript" src="js/lib/isotope/jquery.isotope.min.js"></script>
-    <script type="text/javascript" src="js/lib/isotope/jquery.isotope.sloppy-masonry.min.js"></script>
-    <script type="text/javascript" src="js/lib/neko-contact-ajax-plugin/js/jquery.form.js"></script>
-    <script type="text/javascript" src="js/lib/neko-contact-ajax-plugin/js/jquery.validate.min.js"></script>
-    <script type="text/javascript" src="js/lib/magnific-popup/jquery.magnific-popup.min.js"></script>
-    <script type="text/javascript" src="js/lib/parallax/js/jquery.stellar.min.js"></script>
-    <script type="text/javascript" src="js/lib/jquery.sharrre-1.3.4/jquery.sharrre-1.3.4.min.js"></script>
-    <script type="text/javascript" src="js/lib/owl.carousel/owl-carousel/owl.carousel.min-MODIFIED.js"></script>
-    <!-- Custom  -->
-    <script type="text/javascript" src="js/custom.js"></script>
-
-
-    <script type="text/javascript">
-      $(function () {
-        function getUrlVars(){
-          var vars = [], hash;
-          var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-          for(var i = 0; i < hashes.length; i++) {
-            hash = hashes[i].split('=');
-            vars.push(hash[0]);
-            vars[hash[0]] = hash[1];
-          }
-          return vars;
-        }
-
-        var airtableUrl = "https://api.airtable.com/v0/app6eRFDq8Pyz1fXH/RSVP";
-        var token = 'keyiSSC1kq9tmoocc';
-        var db = {};
-        var rsvp = {};
-
-        // check code
-        var code = getUrlVars()["code"];
-        console.log('code', code)
-
-        if (!code) {
-          console.log('no code')
-          window.location.href = '/welcome.html';
-        }
-
-        $.ajax({
-          url: airtableUrl,
-          success: function(data, status) {
-            // get data
-            _.each(data.records, function (record) {
-              var fields = record.fields;
-              fields.id = record.id;
-              db[record.fields.code] = fields;
-            });
-
-            // check for code
-            if (!!db[code]) {
-              rsvp = db[code];
-              // SET ALL FIELDS IN RSVP
-              $("#name").val(rsvp.name);
-              $("#email").val(rsvp.email);
-              $("#seats").text(rsvp.seats);
-              $("#rsvp-seats").attr('placeholder', 'Total guests, max ' + rsvp.seats);
-              console.log('success', rsvp)
-            } else {
-              window.location.href = '/welcome.html';
-              console.log('error')
-            }
-
-          },
-          beforeSend: function(xhr, settings) { xhr.setRequestHeader('Authorization','Bearer ' + token); } 
-        });
-
-        // update
-        var updateRSVP = function () {
-          var data = {
-            fields: {
-              name: $("#name").val(),
-              email: $("#email").val(),
-              dietary: 'no soybeans for albert'
-            }
-          };
-
-          // check seats
-
-          $.ajax({
-            url: airtableUrl + '/' + rsvp.id,
-            data: data,
-            type: 'PATCH',
-            "Access-Control-Allow-Methods": 'POST, GET, PUT, DELETE, PATCH',
-            success: function(data, status) {
-              // TODO display success
-              console.log('data', data)
-            },
-            beforeSend: function(xhr, settings) { xhr.setRequestHeader('Authorization','Bearer ' + token); } 
-          });
-
-        };
-
-        // on submit, updateRSVP
-        $("#rsvpform").submit(function (e) {
-          e.preventDefault();
-          updateRSVP();
-        });
-
-      });
-    </script>
-  </body>
-  </html>
+		<!-- Basic Page Needs
+		================================================== -->
+		<meta charset="utf-8">
+		<title>Emily + Josh</title>
+		<!-- Mobile Specific Metas
+		================================================== -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<!-- CSS
+		================================================== -->
+		<!-- Bootstrap  -->
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+		<!-- web font  -->
+		<link href='https://fonts.googleapis.com/css?family=Raleway:400,900' rel='stylesheet' type='text/css'>
+		
+		<!-- icon fonts -->
+		<link type="text/css" rel="stylesheet" href="font-icons/custom-icons/css/custom-icons.css">
+		<link type="text/css" rel="stylesheet" href="font-icons/custom-icons/css/custom-icons-ie7.css">
+		<!-- Custom css -->
+		<link type="text/css" rel="stylesheet" href="css/layout.css">
+		<link type="text/css" id="colors" rel="stylesheet" href="css/sea-green.css">
+		<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
+		<script src="js/modernizr-2.6.1.min.js"></script>
+
+		
+		<!-- Favicons
+		================================================== -->
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<!-- <link rel="apple-touch-icon" href="images/apple-touch-icon.png"> -->
+		<!-- <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png"> -->
+		<!-- <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png"> -->
+		<!-- <link rel="apple-touch-icon" sizes="144x144" href="images/apple-touch-icon-144x144.png"> -->
+	</head>
+	<body id="comingSoonPic">
+		<div class="maskParent">
+			<div class="maskOverlay opacity-1"></div>
+		<!-- Primary Page Layout 
+		================================================== -->
+		<div style="position: absolute; top: 50%; left: 0; transform: translateY(-50%); width: 100%;">
+			<!-- content -->
+			<section class="counter">
+				<div class="container">
+					<div class="row">
+
+						<div class="col-md-12 text-center">
+							<!-- <img src="images/main-logo-big.png" alt="" class="comingSoonLogo"/> -->
+							<h1>Emily <span style="color:#f15f7f">+</span> Josh</h1>
+							<!-- <p>We can't wait to celebrate with you!</p> -->
+						</div>
+						<div class="col-md-12">
+							<div id="defaultCountdown"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section  id="social">
+				<div class="container">
+					<div class="row">
+
+						<div class="col-md-12 text-center">
+							<form id="invite-code" role="form">
+								<div class="input-group">
+									<input type="text" class="form-control" name="code" id="code" placeholder="INVITATION CODE"  title="Invitation Code"/>
+									<span class="input-group-btn">
+										<button name="submit" type="submit" class="btn btn-lg" id="submit"> Enter</button>
+									</span>
+								</div>
+							</form>
+						</div>
+
+						<div class="col-md-12 text-center copyright" >
+							<p style="color:#f15f7f; font-size:2em;"> <i class="icon-glyph-316"></i>JoshilyEverAfter</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</div>
+		<!-- End footer -->
+	</div>
+
+		<!-- End Document 
+		================================================== -->
+		<script type="text/javascript" src="js/lib/respond/respond.min.js"></script>
+		<script type="text/javascript" src="js/lib/jquery/jquery.1.10.2.min.js"></script>
+		<script type="text/javascript" src="js/lib/jquery-ui/jquery-ui-1.8.23.custom.min.js"></script>
+		<!-- third party plugins  -->
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/lib/easing/jquery.easing.1.3.js"></script>
+
+
+		<!-- countdown -->
+		<script type="text/javascript" src="js/lib/jquery.countdown.package-1.6.3/jquery.countdown.js"></script>
+
+		<script type="text/javascript">
+			$(function () {
+				// COUNTER
+				var weddingDate = new Date(2016,7,6,17); // month is 0 based
+				// weddingDate = new Date(weddingDate.getFullYear()+1, 1 - 1, 26);
+				$('#defaultCountdown').countdown({until: weddingDate});
+				$('#year').text(weddingDate.getFullYear());
+
+				// ENTER SITE
+				$("#invite-code").submit(function (e) {
+					e.preventDefault();
+					var code = $("#code").val();
+					window.location.href = 'rsvp.html?code=' + code;
+				});
+
+			});
+		</script>
+	</body>
+	</html>
