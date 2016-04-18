@@ -288,11 +288,17 @@
               </div>
             </form>
           </div>
-          <div class="row">
+
+          <div class="row" id="response-message" hidden>
             <div class="col-sm-12 text-center" style="margin-top:20px">
-              <p id="response-message">Thanks for your RSVP! We can't wait to celebrate with you.<p>
+              <div class="ctaBox ctaBox2Cols">
+                  <h1>
+                    Thanks for your RSVP! We can't wait to celebrate with you.
+                  </h1>
+              </div>
             </div>
           </div>
+
         </div>
       </section>
       <!-- / rsvp -->
@@ -557,11 +563,13 @@
           <div class="row">
             <div class="col-xs-12 headingCenter">
               <h1>The registry</h1>
-              <h2 class="subTitle"></h2>
+              <h2 class="subTitle">We are very fortunate to have everything we need in our lives. Your support of our new life together is the best gift we could ask for.</h2>
             </div>
           </div>
           <div class="row">
-            <div class="col-md-3 col-sm-6 mb-sm mb-xs">
+            <a class="zola-registry-embed" href="https://www.zola.com/registry/joshily" data-registry-key="joshily">Our Zola Wedding Registry</a>
+
+            <!-- <div class="col-md-3 col-sm-6 mb-sm mb-xs">
               <article class="boxFeature-2">
                 <i class="icon-glyph-142 iconBig"></i>
                 <h2>Modern layout</h2>
@@ -591,7 +599,7 @@
                 <h2>Easy Customization</h2>
                 <p>Clear code and documentation, base on Bootstrap 3</p>
               </article>
-            </div>  
+            </div>   -->
 
           </div>
         </div>
@@ -634,6 +642,8 @@
     <script type="text/javascript" src="js/lib/owl.carousel/owl-carousel/owl.carousel.min-MODIFIED.js"></script>
     <!-- Custom  -->
     <script type="text/javascript" src="js/custom.js"></script>
+    <!-- ZOLA registry -->
+    <script>!function(e,t,n){var s,a=e.getElementsByTagName(t)[0];e.getElementById(n)||(s=e.createElement(t),s.id=n,s.async=!0,s.src="https://widget.zola.com/js/widget.js",a.parentNode.insertBefore(s,a))}(document,"script","zola-wjs");</script>
 
 
     <script type="text/javascript">
@@ -694,10 +704,10 @@
               $("#phone").val(rsvp.phone);
               $("#address").text(rsvp.address);
               $("#comments").text(rsvp.comments);
-              console.log('success', rsvp)
+              console.log('RSVP for ', rsvp.name)
             } else {
               window.location.href = '/';
-              console.log('error')
+              console.log('Missing or invalid invitation code')
             }
 
           },
@@ -737,8 +747,7 @@
             type: 'PATCH',
             "Access-Control-Allow-Methods": 'POST, GET, PUT, DELETE, PATCH',
             success: function(data, status) {
-              // TODO display success
-              console.log('data', data)
+              $("#response-message").show();
             },
             beforeSend: function(xhr, settings) { xhr.setRequestHeader('Authorization','Bearer ' + token); } 
           });
