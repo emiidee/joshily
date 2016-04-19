@@ -92,13 +92,13 @@ h2.subTitle:after, h1.noSubtitle:after{
 	color:#fff;
 }
 #home, #parallaxSlice1, #parallaxSlice2, #parallaxSlice3, #parallaxSlice4 {
-	background-color:#3CB6B6;
+	background-color:#fff;
 }
 #parallaxSlice1 {
 	background-image: url('../images/theme-pics/paralax-1.jpg');
 }
 #parallaxSlice2 {
-	background-image: url('../images/theme-pics/proposal4.jpg');
+	background-image: url('../images/theme-pics/helipad.jpg');
 }
 #parallaxSlice3 {
 	background-image: url('../images/theme-pics/paralax-3.jpg');
