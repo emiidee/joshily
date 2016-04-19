@@ -311,7 +311,7 @@
                 </div>
                 <div class="form-group">
                   <label for="rsvp-seats">How many in your party?</label>
-                  <input name="rsvp-seats" class="form-control" type="number" id="rsvp-seats" placeholder="Total number of guests"/>
+                  <input name="rsvp-seats" class="form-control" type="number" id="rsvp-seats" placeholder="Total guests including you"/>
                 </div>
                 <div class="form-group">
                   <label for="guest-names">Who will be joining us?</label>
@@ -730,7 +730,7 @@
               if (!!rsvp["rsvp-seats"]) {
                 $("#rsvp-seats").val(rsvp["rsvp-seats"]);
               } else {
-                $("#rsvp-seats").attr('placeholder', 'Total guests, max ' + rsvp.seats);
+                $("#rsvp-seats").attr('placeholder', 'Total guests including you, max ' + rsvp.seats);
               }
               $("#guest-names").text(rsvp['guest-names']);
               $("#email").val(rsvp.email);
