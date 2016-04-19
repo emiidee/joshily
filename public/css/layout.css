@@ -973,13 +973,13 @@ body#fullScreen #mainHeader{display:none;}
 
 .btn.homeBtn {
 	position:relative;
-	background:rgba(255,255,255,0.25);
+	background:rgba(186,223,213,0.6);
 }
 
 #logoBig img{
 	width:300px;
 	margin:auto;
-	margin-bottom: 60px;
+	margin-bottom: 1.5em;
 	position: relative;
 }
 
@@ -1048,7 +1048,7 @@ footer h3 {
 /** OWL SLIDER **/
 
 .owl-carousel h1 {
-	text-shadow: 2px 2px #bce3e0;
+	text-shadow: 1px 1px #bbb;
 }
 
 .owl-buttons {}
