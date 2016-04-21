@@ -776,13 +776,16 @@
 
           $.ajax({
             url: airtableUrl + '/' + rsvp.id,
-            data: data,
+            data: JSON.stringify(data),
             type: 'PATCH',
             "Access-Control-Allow-Methods": 'POST, GET, PUT, DELETE, PATCH',
             success: function(data, status) {
               $("#response-message").show();
             },
-            beforeSend: function(xhr, settings) { xhr.setRequestHeader('Authorization','Bearer ' + token); } 
+            beforeSend: function(xhr, settings) {
+              xhr.setRequestHeader('Authorization','Bearer ' + token);
+              xhr.setRequestHeader('Content-type','application/json');
+            }
           });
 
         };
