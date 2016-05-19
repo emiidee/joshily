@@ -704,48 +704,60 @@
           window.location.href = '/';
         }
 
-        $.ajax({
-          url: airtableUrl,
-          success: function(data, status) {
-            // get data
-            _.each(data.records, function (record) {
-              var fields = record.fields;
-              fields.id = record.id;
-              db[record.fields.code] = fields;
-            });
+        var getDataCheckCode = function (offset) {
+          offset = offset || 0;
+          var url = airtableUrl + '?offset=' + offset;
 
-            // check for code
-            if (!!db[code]) {
-              rsvp = db[code];
+          $.ajax({
+            url: url,
+            success: function(data, status) {
+              // organize data
+              _.each(data.records, function (record) {
+                var fields = record.fields;
+                fields.id = record.id;
+                db[fields.code] = fields;
+              });
 
-              // SET ALL FIELDS IN RSVP
-              $("#name").val(rsvp.name);
-              $("#seats").text(rsvp.seats);
-              if(rsvp.rsvp === 'yes') {
-                $("#rsvp-yes").prop('checked', true);
-              } else if (rsvp.rsvp === 'no') {
-                $("#rsvp-no").prop('checked', true);
-              }
-              $("#rsvp-seats").attr('max', rsvp.seats);
-              if (!!rsvp["rsvp-seats"]) {
-                $("#rsvp-seats").val(rsvp["rsvp-seats"]);
+              if (!!data.offset) {
+                getDataCheckCode(data.offset);
               } else {
-                $("#rsvp-seats").attr('placeholder', 'Total guests including you, max ' + rsvp.seats);
+                checkCode();
               }
-              $("#guest-names").text(rsvp['guest-names']);
-              $("#email").val(rsvp.email);
-              $("#phone").val(rsvp.phone);
-              $("#address").text(rsvp.address);
-              $("#comments").text(rsvp.comments);
-              console.log('RSVP for ', rsvp.name)
-            } else {
-              window.location.href = '/';
-              console.log('Missing or invalid invitation code')
-            }
+            },
+            beforeSend: function(xhr, settings) { xhr.setRequestHeader('Authorization','Bearer ' + token); } 
+          });
+        }
 
-          },
-          beforeSend: function(xhr, settings) { xhr.setRequestHeader('Authorization','Bearer ' + token); } 
-        });
+        var checkCode = function () {
+          // check for code
+          if (!!db[code]) {
+            rsvp = db[code];
+
+            // SET ALL FIELDS IN RSVP
+            $("#name").val(rsvp.name);
+            $("#seats").text(rsvp.seats);
+            if(rsvp.rsvp === 'yes') {
+              $("#rsvp-yes").prop('checked', true);
+            } else if (rsvp.rsvp === 'no') {
+              $("#rsvp-no").prop('checked', true);
+            }
+            $("#rsvp-seats").attr('max', rsvp.seats);
+            if (!!rsvp["rsvp-seats"]) {
+              $("#rsvp-seats").val(rsvp["rsvp-seats"]);
+            } else {
+              $("#rsvp-seats").attr('placeholder', 'Total guests including you, max ' + rsvp.seats);
+            }
+            $("#guest-names").text(rsvp['guest-names']);
+            $("#email").val(rsvp.email);
+            $("#phone").val(rsvp.phone);
+            $("#address").text(rsvp.address);
+            $("#comments").text(rsvp.comments);
+            console.log('RSVP for ', rsvp.name)
+          } else {
+            window.location.href = '/';
+            console.log('Missing or invalid invitation code')
+          }
+        };
 
         // update
         var updateRSVP = function () {
@@ -790,6 +802,8 @@
 
         };
 
+        // check code and seed data
+        getDataCheckCode();
         // on submit, updateRSVP
         $("#rsvpform").submit(function (e) {
           e.preventDefault();
